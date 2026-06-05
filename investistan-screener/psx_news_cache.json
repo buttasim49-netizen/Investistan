@@ -1,0 +1,579 @@
+{
+  "fetched_at": "2026-06-01T17:29:50.399040",
+  "articles": [
+    {
+      "title": "Top EU diplomat says Pakistan a major regional power, ‘important partner’",
+      "url": "https://www.dawn.com/news/2004340/top-eu-diplomat-says-pakistan-a-major-regional-power-important-partner",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 15:32:14 +0500",
+      "sentiment": 0,
+      "tickers": [
+        "KAPCO",
+        "NCPL",
+        "KEL",
+        "NPML",
+        "HUBC"
+      ]
+    },
+    {
+      "title": "Oil industry opposes windfall tax in upcoming budget",
+      "url": "https://www.dawn.com/news/2004210/oil-industry-opposes-windfall-tax-in-upcoming-budget",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 07:01:27 +0500",
+      "sentiment": -1,
+      "tickers": [
+        "PSO",
+        "OGDC",
+        "EFERT",
+        "PPL",
+        "HASCOL",
+        "FFC",
+        "FATIMA",
+        "APL"
+      ]
+    },
+    {
+      "title": "US-based Coinbase offers trading using Indian rupee",
+      "url": "https://www.dawn.com/news/2004335/us-based-coinbase-offers-trading-using-indian-rupee",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 10:55:24 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Inflation squeezing Safed Posh the most in Pakistan",
+      "url": "https://www.dawn.com/news/2004207/inflation-squeezing-safed-posh-the-most-in-pakistan",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 08:03:30 +0500",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "Imports of cotton surge despite lower local prices",
+      "url": "https://www.dawn.com/news/2004232/imports-of-cotton-surge-despite-lower-local-prices",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 07:01:12 +0500",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Seven years on, Bajaur solar power  project still incomplete",
+      "url": "https://www.dawn.com/news/2004183/seven-years-on-bajaur-solar-power-project-still-incomplete",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 08:51:27 +0500",
+      "sentiment": 0,
+      "tickers": [
+        "KAPCO",
+        "NCPL",
+        "KEL",
+        "NPML",
+        "HUBC"
+      ]
+    },
+    {
+      "title": "Solar and national security",
+      "url": "https://www.dawn.com/news/2004212/solar-and-national-security",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 14:04:38 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "The Laffer Curve curse on fruit juices",
+      "url": "https://www.dawn.com/news/2004277/the-laffer-curve-curse-on-fruit-juices",
+      "source": "Dawn",
+      "date": "Mon, 01 Jun 2026 09:04:03 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "'No sufficient outcome' yet of talks to secure discounts from Chinese power producers: Leghari",
+      "url": "https://www.dawn.com/news/2004161/no-sufficient-outcome-yet-of-talks-to-secure-discounts-from-chinese-power-producers-leghari",
+      "source": "Dawn",
+      "date": "Sun, 31 May 2026 21:33:21 +0500",
+      "sentiment": 0,
+      "tickers": [
+        "KAPCO",
+        "NCPL",
+        "KEL",
+        "NPML",
+        "HUBC"
+      ]
+    },
+    {
+      "title": "Rs200 billion import relief for industry",
+      "url": "https://www.dawn.com/news/2004082/rs200-billion-import-relief-for-industry",
+      "source": "Dawn",
+      "date": "Sun, 31 May 2026 09:34:41 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Sindh collects Rs1.5tr in cess as roads stay broken",
+      "url": "https://www.dawn.com/news/2004080/sindh-collects-rs15tr-in-cess-as-roads-stay-broken",
+      "source": "Dawn",
+      "date": "Sun, 31 May 2026 09:42:39 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "FBR misses May target by Rs28bn",
+      "url": "https://www.dawn.com/news/2004078/fbr-misses-may-target-by-rs28bn",
+      "source": "Dawn",
+      "date": "Sun, 31 May 2026 09:40:42 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Gulf uncertainty may hit remittances",
+      "url": "https://www.dawn.com/news/2004081/gulf-uncertainty-may-hit-remittances",
+      "source": "Dawn",
+      "date": "Sun, 31 May 2026 08:01:47 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Govt mulls scrapping export tax in budget",
+      "url": "https://www.dawn.com/news/2003828/govt-mulls-scrapping-export-tax-in-budget",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 07:42:43 +0500",
+      "sentiment": -1,
+      "tickers": [
+        "PSO",
+        "OGDC",
+        "EFERT",
+        "PPL",
+        "FFC",
+        "FATIMA"
+      ]
+    },
+    {
+      "title": "Meta plans AI pendant, 'wearables for work' in hardware boost: report",
+      "url": "https://www.dawn.com/news/2003911/meta-plans-ai-pendant-wearables-for-work-in-hardware-boost-report",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 14:24:11 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "High interest rates stifling growth, warn industry leaders",
+      "url": "https://www.dawn.com/news/2003827/high-interest-rates-stifling-growth-warn-industry-leaders",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 07:24:39 +0500",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Gadoon industrial estate faces crisis",
+      "url": "https://www.dawn.com/news/2003826/gadoon-industrial-estate-faces-crisis",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 07:30:04 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Pakistani freelancers outearn regional rivals",
+      "url": "https://www.dawn.com/news/2003825/pakistani-freelancers-outearn-regional-rivals",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 06:02:58 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX extends gains in post-Eid session",
+      "url": "https://www.dawn.com/news/2003822/psx-extends-gains-in-post-eid-session",
+      "source": "Dawn",
+      "date": "Sat, 30 May 2026 06:02:58 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Govt cuts petrol, diesel prices by Rs22",
+      "url": "https://www.dawn.com/news/2003697/govt-cuts-petrol-diesel-prices-by-rs22",
+      "source": "Dawn",
+      "date": "Fri, 29 May 2026 23:27:40 +0500",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Idrees Textile shifts to value-added products Idrees Textile Mills Limited is charting a new course. The Company's Board of Directors, convening on Ju",
+      "url": "https://mettisglobal.news/Idrees-Textile-shifts-to-valueadded-products-60774",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "KTML",
+        "NML",
+        "GATM"
+      ]
+    },
+    {
+      "title": "PSX Closing Bell: Bears Have the Final Say The benchmark KSE-100 Index came under significant selling pressure on Monday, closing at 170,600.20, down ",
+      "url": "https://mettisglobal.news/PSX-Closing-Bell-Bears-Have-the-Final-Say-60773",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Dadex Eternit to sell Karachi property to AKD for Rs800m Dadex Eternit Limited (PSX:DADX) has entered into an agreement with Mr. Aqeel Karim Dhedhi fo",
+      "url": "https://mettisglobal.news/Dadex-Eternit-to-sell-Karachi-property-to-AKD-for-Rs800m-60771",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "NCCPL issues new clearing timelines for DLL trades The National Clearing Company of Pakistan Limited (NCCPL) has issued a revised clearing and settlem",
+      "url": "https://mettisglobal.news/NCCPL-issues-new-clearing-timelines-for-DLL-trades-60767",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Supernet plans right issue of up to Rs914.8m The Board of Directors of Supernet Technologies Limited (PSX: STL) has approved, in principle, the compan",
+      "url": "https://mettisglobal.news/Supernet-plans-right-issue-of-up-to-Rs9148m-60766",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "SYS",
+        "AVN",
+        "TRG",
+        "AIRLINK"
+      ]
+    },
+    {
+      "title": "TRG confirms Chishti-linked share transfer TRG Pakistan Limited (TRGP) has formally confirmed that the massive block of shares recently acquired by JS",
+      "url": "https://mettisglobal.news/TRG-confirms-Chishtilinked-share-transfer-60754",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "TRG"
+      ]
+    },
+    {
+      "title": "Triple crown for Arif Habib Limited Arif Habib Limited recently achieved a historic milestone in Pakistan's financial sector by securing a clean sweep",
+      "url": "https://mettisglobal.news/Triple-crown-for-Arif-Habib-Limited-60750",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Weekly Market Roundup Pakistan’s equity market extended its upward momentum during the week ended May 29, 2026, with the benchmark KSE-100 Index closi",
+      "url": "https://mettisglobal.news/Weekly-Market-Roundup-60748",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX Closing Bell: Bulls Come Out Swinging The benchmark KSE-100 Index extended its upward momentum on Friday, closing at 173,962.81, up by 2,237.52 po",
+      "url": "https://mettisglobal.news/PSX-Closing-Bell-Bulls-Come-Out-Swinging-60743",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "ITANZ secures strategic tech MoUs during PM's China visit iTANZ Technologies Limited (PSX:ITANZ)  signed Memorandums of Understanding (MoUs) with thre",
+      "url": "https://mettisglobal.news/ITANZ-secures-strategic-tech-MoUs-during-PMs-China-visit-60741",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "SYS",
+        "AVN",
+        "TRG",
+        "AIRLINK"
+      ]
+    },
+    {
+      "title": "Pakistan, EU eye expanded trade, climate, digital ties",
+      "url": "https://mettisglobal.news/Pakistan-EU-eye-expanded-trade-climate-digital-ties-60776",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PKR strengthens further against USD",
+      "url": "https://mettisglobal.news/PKR-strengthens-further-against-USD-60775",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Idrees Textile shifts to value-added products",
+      "url": "https://mettisglobal.news/Idrees-Textile-shifts-to-valueadded-products-60774",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "KTML",
+        "NML",
+        "GATM"
+      ]
+    },
+    {
+      "title": "PSX Closing Bell: Bears Have the Final Say",
+      "url": "https://mettisglobal.news/PSX-Closing-Bell-Bears-Have-the-Final-Say-60773",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX's May Magic",
+      "url": "https://mettisglobal.news/PSXs-May-Magic-60772",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX's May Magic The KSE-100 Index staged an impressive rally in May 2026, surging 10,969 points, equivalent to a gain of 6.73%, to close the month at ",
+      "url": "https://mettisglobal.news/PSXs-May-Magic-60772",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "PSX rebounds in April after brutal slide After enduring back-to-back double-digit monthly losses, the sharpest in years, Pakistan's equity market stag",
+      "url": "https://mettisglobal.news/PSX-rebounds-in-April-after-brutal-slide-60161",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "Geopolitical shock wipes over 19,000 points off KSE-100 in March The Pakistan Stock Exchange’s benchmark KSE-100 Index recorded its worst monthly perf",
+      "url": "https://mettisglobal.news/Geopolitical-shock-wipes-over-19000-points-off-KSE100-in-March-59385",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX meets a 'Merciless Lover' in Feb February 2026 turned into a brutal reality check for the red-hot rally that had been pulling in fresh investors f",
+      "url": "https://mettisglobal.news/PSX-meets-a-Merciless-Lover-in-Feb-58758",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "PSX in January The KSE-100 Index delivered a strong performance during January 2026, rising by more than 10,100 points on a month-on-month basis on im",
+      "url": "https://mettisglobal.news/PSX-in-January-58166",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Weekly Market Roundup The Pakistan Stock Exchange ended the week on a positive note as the benchmark KSE-100 Index advanced by 1,540 points, or 0.91% ",
+      "url": "https://mettisglobal.news/Weekly-Market-Roundup-57392",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Weekly Market Roundup The Pakistan Stock Exchange extended its upward momentum during the week as the benchmark KSE-100 Index climbed from 167,086 poi",
+      "url": "https://mettisglobal.news/Weekly-Market-Roundup-57265",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSX in November: Fortune in Focus November 2025 proved to be a month where the KSE-100 Index truly flexed its muscles, closing at 166,677.7 points, up",
+      "url": "https://mettisglobal.news/PSX-in-November-Fortune-in-Focus-57015",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Pakistan, EU eye expanded trade, climate, digital ties Pakistan and the European Union have agreed to deepen their bilateral ties across trade, climat",
+      "url": "https://mettisglobal.news/Pakistan-EU-eye-expanded-trade-climate-digital-ties-60776",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PKR strengthens further against USD The Pakistani rupee continued its gradual upward trajectory against the US dollar on Monday, posting a modest gain",
+      "url": "https://mettisglobal.news/PKR-strengthens-further-against-USD-60775",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": []
+    },
+    {
+      "title": "Gold price in Pakistan falls Rs4,400 per tola Gold price in Pakistan decreased on Monday, with 24-karat gold being sold at Rs471,762 per tola, down Rs",
+      "url": "https://mettisglobal.news/Gold-price-in-Pakistan-falls-Rs4400-per-tola-60770",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "SBP adds SAR, AED to Naya Pakistan Certificates The State Bank of Pakistan has issued updated rates of return for Conventional Naya Pakistan Certifica",
+      "url": "https://mettisglobal.news/SBP-adds-SAR-AED-to-Naya-Pakistan-Certificates-60769",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "MEBL",
+        "HBL",
+        "MCB",
+        "BAFL",
+        "BAHL",
+        "NBP",
+        "UBL",
+        "ABL"
+      ]
+    },
+    {
+      "title": "Solar panels, fertilizers may escape tax hike in upcoming budget The federal government is reportedly planning a series of tax relief measures in the ",
+      "url": "https://mettisglobal.news/Solar-panels-fertilizers-may-escape-tax-hike-in-upcoming-budget-60768",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": [
+        "PSO",
+        "OGDC",
+        "EFERT",
+        "PPL",
+        "FFC",
+        "FATIMA",
+        "FFBL"
+      ]
+    },
+    {
+      "title": "TRG: Proving Grounds",
+      "url": "https://mettisglobal.news/TRG-Proving-Grounds-60438",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "TRG"
+      ]
+    },
+    {
+      "title": "Pakistan’s transition from: Debt Free to Debt Sustainability",
+      "url": "https://mettisglobal.news/Pakistans-transition-from-Debt-Free-to-Debt-Sustainability-59947",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "Pakistan's OMCs caught in the crossfire",
+      "url": "https://mettisglobal.news/Pakistans-OMCs-Caught-in-the-Crossfire-59622",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "The Exit That Keeps Giving — But Not to You",
+      "url": "https://mettisglobal.news/PSMC-The-Exit-That-Keeps-Giving-But-Not-to-You-59497",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "Pakistan's Oil Supply Chain Amid Regional Conflict: Observations and the Path Forward",
+      "url": "https://mettisglobal.news/Pakistans-Oil-Supply-Chain-Amid-Regional-Conflict-Observations-and-the-Path-Forward-59471",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": [
+        "PSO",
+        "HASCOL",
+        "APL"
+      ]
+    },
+    {
+      "title": "May inflation rises  11.7% YoY Pakistan's headline Consumer Price Index (CPI) inflation accelerated to 11.7% year-on-year (YoY) in May 2026, up from 1",
+      "url": "https://mettisglobal.news/May-inflation-risesdrops-by-60764",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "Pakistan targets 4% GDP growth in FY27 Pakistan has set a GDP growth target of 4% for fiscal year 2026-27, banking on a recovery across agriculture, i",
+      "url": "https://mettisglobal.news/Pakistan-targets-4-GDP-growth-in-FY27-60765",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 1,
+      "tickers": [
+        "MEBL",
+        "HBL",
+        "MCB",
+        "BAFL",
+        "BAHL",
+        "NBP",
+        "UBL",
+        "ABL"
+      ]
+    },
+    {
+      "title": "SCRA balance rises to Rs28.7bn The SCRA balance increased by Rs810.42 million during the week ending May 22, 2026 to close at Rs28.71 billion.",
+      "url": "https://mettisglobal.news/SCRA-balance-rises-to-Rs287bn-60763",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "SECP unveils Statutory Compliance Certificate The Securities and Exchange Commission of Pakistan (SECP) has introduced a new ‘Certificate of Statutory",
+      "url": "https://mettisglobal.news/SECP-unveils-Statutory-Compliance-Certificate-60762",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "CPI Preview: May inflation to clock in at 11.88% Mettis Global estimates Pakistan's headline CPI at 11.88% YoY for May 2026, a sharp jump from April's",
+      "url": "https://mettisglobal.news/CPI-Preview-May-inflation-to-clock-in-at-1188-60761",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": -1,
+      "tickers": []
+    },
+    {
+      "title": "Pakistan's electricity bills are actually falling Pakistan’s electricity subsidies for protected consumers have more than doubled since 2022, reaching",
+      "url": "https://mettisglobal.news/Power-Division-refutes-misinformation-on-subsidies-tariffs-energy-mix-60755",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "PSMA urges govt to allow sugar exports Pakistan Sugar Mills Association (PSMA) has formally written to Senator Muhammad Ishaq Dar, Deputy Prime Minist",
+      "url": "https://mettisglobal.news/PSMA-urges-govt-to-allow-sugar-exports-60753",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    },
+    {
+      "title": "MG Morning Breeze: Updates to Skim before Market Morning Breeze aims to lessen the load for its readers by curating noteworthy updates from the preced",
+      "url": "https://mettisglobal.news/MG-Morning-Breeze-Updates-to-Skim-before-Market-60751",
+      "source": "Mettis Global",
+      "date": "2026-06-01",
+      "sentiment": 0,
+      "tickers": []
+    }
+  ]
+}
