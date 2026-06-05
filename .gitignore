@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+update_status.json
+update_request.json
+auto_update_log.txt
+psx_screener_results_new.csv
+dist/
+build/
+*.spec.bak

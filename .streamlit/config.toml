@@ -1,1 +1,15 @@
+# Makes Streamlit's built-in widgets match the dashboard's dark design system,
+# so inputs, tables, tabs and forms look cohesive instead of default-themed.
+[theme]
+base                     = "dark"
+primaryColor             = "#6366f1"   # indigo accent (matches the gradient + nav)
+backgroundColor          = "#060912"   # deep-space app background
+secondaryBackgroundColor = "#0f1320"   # cards, inputs, sidebar surfaces
+textColor                = "#f9fafb"
+font                     = "sans serif"
 
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
