@@ -88,21 +88,47 @@ def inject_css():
     light_overrides = ""
     if light:
         light_overrides = f"""
-        /* ---- LIGHT THEME OVERRIDES (experimental) ---- */
+        /* ---- LIGHT THEME OVERRIDES ---- */
         .stApp {{ background: {t['bg']} !important; background-image: none !important; }}
         [data-testid="stSidebar"] {{ background: {t['surface']} !important; background-image: none !important;
                                       border-right: 1px solid {t['border']}; }}
         [data-testid="stHeader"] {{ background: rgba(0,0,0,0) !important; }}
-        /* flip white inline text to dark (matches color:#xxxxxx written by the app) */
-        .stApp [style*="color:#f9fafb"], .stApp [style*="color:#e5e7eb"],
-        .stApp [style*="color:#fff"], .stApp [style*="color: #f9fafb"] {{ color: {t['text']} !important; }}
-        .stApp [style*="color:#9ca3af"], .stApp [style*="color:#4b5563"],
-        .stApp [style*="color:#374151"] {{ color: {t['text_muted']} !important; }}
+
+        /* Flip white / near-white inline text to dark. An author !important rule beats a
+           non-important inline color regardless of specificity, so this catches the cards,
+           prices and section headers that hard-code light colors. */
+        [style*="color:#f9fafb"], [style*="color: #f9fafb"], [style*="color:#fff"],
+        [style*="color:#ffffff"], [style*="color: #fff"], [style*="color:#e5e7eb"],
+        [style*="color:#d1d5db"], [style*="color:#f3f4f6"], [style*="color:#e2e8f0"] {{
+            color: {t['text']} !important; -webkit-text-fill-color: {t['text']} !important;
+        }}
+        /* Mid-grays go low-contrast on a light bg — darken them */
+        [style*="color:#9ca3af"], [style*="color:#6b7280"] {{
+            color: {t['text_muted']} !important; -webkit-text-fill-color: {t['text_muted']} !important;
+        }}
+
+        /* Streamlit's own widgets (st.metric KPI row) hard-set their value color to white */
+        [data-testid="stMetricValue"], [data-testid="stMetricValue"] * {{
+            color: {t['text']} !important; -webkit-text-fill-color: {t['text']} !important;
+        }}
+        [data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * {{
+            color: {t['text_muted']} !important; -webkit-text-fill-color: {t['text_muted']} !important;
+        }}
+
+        /* Glassmorphism cards: give them a visible hairline edge on a light background */
+        [style*="rgba(255,255,255,0.03)"], [style*="rgba(255,255,255,0.02)"],
+        [style*="rgba(255,255,255,0.01)"] {{ border-color: {t['border']} !important; }}
+
         .stMarkdown, .stMarkdown p, label, .stCaption {{ color: {t['text']} !important; }}
         """
 
     css = f"""
     <style>
+    /* ============ LAYOUT: top-nav app (sidebar hidden) ============ */
+    [data-testid="stSidebar"], [data-testid="collapsedControl"],
+    [data-testid="stSidebarCollapsedControl"] {{ display: none !important; }}
+    .block-container {{ padding-top: 1.4rem !important; max-width: 1320px; }}
+
     /* ============ INPUT VISIBILITY FIX (works in both themes) ============ */
     .stTextInput input, .stNumberInput input, .stTextArea textarea,
     [data-baseweb="input"] input, [data-baseweb="base-input"] input,

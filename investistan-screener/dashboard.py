@@ -694,7 +694,7 @@ def build_portfolio_history(holdings_snapshot: tuple, period: str = "6mo") -> pd
     # Align to common dates
     combined = pd.concat(series_list, axis=1)
     combined.columns = [sym for sym, s in price_history.items() if s is not None]
-    combined = combined.fillna(method="ffill").dropna(how="all")
+    combined = combined.ffill().dropna(how="all")
 
     # For stocks with no history, use avg_price for all dates
     for sym, qty, avg_price in holdings_snapshot:
@@ -1085,141 +1085,76 @@ def pnl_color(pct):
     return "green" if pct >= 0 else "red"
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-with st.sidebar:
-    # Screener run time (from CSV file)
-    screener_mtime  = SCREENER_CSV.stat().st_mtime if SCREENER_CSV.exists() else None
-    screener_dt     = datetime.fromtimestamp(screener_mtime) if screener_mtime else None
-    screener_label  = screener_dt.strftime("%b %d, %H:%M") if screener_dt else "Never"
-    screener_today  = screener_dt and screener_dt.date() == datetime.now().date()
-    screener_color  = "#6ee7b7" if screener_today else "#f87171"  # green=today, red=stale
-    screener_dot    = "#10b981" if screener_today else "#ef4444"
+# ── Status (screener freshness + market open) ────────────────────────────────
+screener_mtime  = SCREENER_CSV.stat().st_mtime if SCREENER_CSV.exists() else None
+screener_dt     = datetime.fromtimestamp(screener_mtime) if screener_mtime else None
+screener_label  = screener_dt.strftime("%b %d, %H:%M") if screener_dt else "Never"
+screener_today  = screener_dt and screener_dt.date() == datetime.now().date()
+screener_color  = "#6ee7b7" if screener_today else "#f87171"
+screener_dot    = "#10b981" if screener_today else "#ef4444"
+prices_now      = datetime.now().strftime("%H:%M")
+mkt_open        = is_market_open()
+prices_label    = f"Live · {prices_now}" if mkt_open else f"Closed · {prices_now}"
+prices_color    = "#6ee7b7" if mkt_open else "#9ca3af"
+prices_dot      = "#10b981" if mkt_open else "#6b7280"
 
-    # Live prices time (always "now" since they refresh every 60s)
-    prices_now      = datetime.now().strftime("%H:%M")
-    mkt_open        = is_market_open()
-    prices_label    = f"Live · {prices_now}" if mkt_open else f"Closed · {prices_now}"
-    prices_color    = "#6ee7b7" if mkt_open else "#9ca3af"
-    prices_dot      = "#10b981" if mkt_open else "#6b7280"
+# ── Navigation state (driven by the top nav bar; pending_nav lets cards jump) ─
+PAGES = ["📊 Market Overview", "💼 My Portfolio",
+         "🔍 Stock Analyser", "📋 Full Screener",
+         "💎 Value & Reversals", "👁️ Watchlist"]
+if "nav_page" not in st.session_state:
+    st.session_state["nav_page"] = PAGES[0]
+if "pending_nav" in st.session_state:
+    _pending = st.session_state.pop("pending_nav")
+    if _pending in PAGES:
+        st.session_state["nav_page"] = _pending
+page = st.session_state["nav_page"]
 
+# ── TOP BAR: brand · status · theme · refresh ────────────────────────────────
+_hb = st.columns([3, 4.2, 1.1, 1.4])
+with _hb[0]:
+    st.markdown(ui.brand_logo_html(), unsafe_allow_html=True)
+with _hb[1]:
     st.markdown(
-        f'<div style="padding:20px 4px 12px">'
-        f'{ui.brand_logo_html()}'
-        # Screener date row
-        f'<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);'
-        f'border-radius:6px;padding:5px 10px;font-size:11px;margin-bottom:4px;'
-        f'display:flex;align-items:center;justify-content:space-between">'
-        f'<div style="display:flex;align-items:center;gap:6px">'
-        f'<div style="width:6px;height:6px;border-radius:50%;background:{screener_dot}"></div>'
-        f'<span style="color:#4b5563">Screener</span></div>'
-        f'<span style="color:{screener_color};font-weight:600">{screener_label}</span>'
-        f'</div>'
-        # Live prices row
-        f'<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);'
-        f'border-radius:6px;padding:5px 10px;font-size:11px;'
-        f'display:flex;align-items:center;justify-content:space-between">'
-        f'<div style="display:flex;align-items:center;gap:6px">'
-        f'<div style="width:6px;height:6px;border-radius:50%;background:{prices_dot}"></div>'
-        f'<span style="color:#4b5563">Prices</span></div>'
-        f'<span style="color:{prices_color};font-weight:600">{prices_label}</span>'
-        f'</div>'
+        f'<div style="display:flex;gap:8px;justify-content:flex-end;align-items:center;height:46px">'
+        f'<span style="display:flex;align-items:center;gap:6px;font-size:11px;'
+        f'background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);'
+        f'border-radius:20px;padding:5px 12px">'
+        f'<span style="width:6px;height:6px;border-radius:50%;background:{screener_dot}"></span>'
+        f'<span style="color:#9ca3af">Screener</span>'
+        f'<span style="color:{screener_color};font-weight:700">{screener_label}</span></span>'
+        f'<span style="display:flex;align-items:center;gap:6px;font-size:11px;'
+        f'background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);'
+        f'border-radius:20px;padding:5px 12px">'
+        f'<span style="width:6px;height:6px;border-radius:50%;background:{prices_dot}"></span>'
+        f'<span style="color:#9ca3af">Prices</span>'
+        f'<span style="color:{prices_color};font-weight:700">{prices_label}</span></span>'
         f'</div>',
-        unsafe_allow_html=True
-    )
-
-    # ── Quick search — always visible ─────────────────────────────────────────
-    st.markdown("### 🔎 Quick Stock Search")
-    quick_ticker = st.text_input(
-        "Enter any PSX ticker",
-        placeholder="FFC, MEBL, PAKRI, AGHA...",
-        key="sidebar_search",
-        label_visibility="collapsed",
-    ).upper().strip()
-    quick_period = st.select_slider("History", ["3mo","6mo","1y","2y","3y","5y","max"], value="1y", key="sidebar_period")
-    quick_go     = st.button("Analyse Stock", type="primary", use_container_width=True, key="sidebar_go")
-
-    st.divider()
-    st.markdown("### Navigate")
-
-    # Handle pending navigation from card buttons BEFORE widget renders
-    PAGES = ["📊 Market Overview", "💼 My Portfolio",
-             "🔍 Stock Analyser", "📋 Full Screener",
-             "💎 Value & Reversals", "👁️ Watchlist"]
-    default_idx = 0
-    if "pending_nav" in st.session_state:
-        pending = st.session_state.pop("pending_nav")
-        if pending in PAGES:
-            default_idx = PAGES.index(pending)
-
-    page = st.radio("", PAGES, index=default_idx,
-                    label_visibility="collapsed")
-
-    st.divider()
+        unsafe_allow_html=True)
+with _hb[2]:
     ui.theme_toggle()
-
-    # Refresh live prices (fast — just clears 60s cache)
-    if st.button("🔄 Refresh Live Prices", use_container_width=True):
+with _hb[3]:
+    if st.button("🔄 Refresh", use_container_width=True, key="top_refresh"):
         st.cache_data.clear()
         st.rerun()
 
-    # Full screener update (runs the screener script in background)
-    if st.button("⚡ Update Full Screener", use_container_width=True):
-        import subprocess, threading
-        def _run():
-            subprocess.run(
-                ["python", "psx_screener_v2.py"],
-                cwd=str(Path(__file__).parent),
-                capture_output=True
-            )
-        st.session_state["screener_running"] = True
-        threading.Thread(target=_run, daemon=True).start()
-        st.toast("Screener update started — takes ~2 minutes. Refresh prices when done.")
+# ── NAV BAR: page buttons (active page = highlighted) ────────────────────────
+_nav = [("📊 Market Overview", "📊  Overview"), ("💼 My Portfolio", "💼  Portfolio"),
+        ("🔍 Stock Analyser", "🔍  Analyser"), ("📋 Full Screener", "📋  Screener"),
+        ("💎 Value & Reversals", "💎  Value"), ("👁️ Watchlist", "👁  Watchlist")]
+_nv = st.columns(6)
+for _i, (_pkey, _plabel) in enumerate(_nav):
+    if _nv[_i].button(_plabel, key=f"topnav_{_pkey}", use_container_width=True,
+                      type="primary" if page == _pkey else "secondary"):
+        st.session_state["nav_page"] = _pkey
+        st.rerun()
+st.markdown('<div style="border-bottom:1px solid rgba(255,255,255,0.08);margin:8px 0 24px"></div>',
+            unsafe_allow_html=True)
 
-    if st.session_state.get("screener_running"):
-        st.caption("⏳ Screener updating in background...")
-
-# ── Load data ─────────────────────────────────────────────────────────────────
+# ── Load data ────────────────────────────────────────────────────────────────
 df_all     = get_screener_data()
 all_news   = load_news()
 fund_cache = load_fundamentals()
-
-# ── Quick search override ─────────────────────────────────────────────────────
-# If user typed a ticker and clicked Analyse from the sidebar,
-# jump straight to the analyser regardless of selected page.
-if quick_go and quick_ticker:
-    st.session_state["analyser_ticker"]  = quick_ticker
-    st.session_state["analyser_period"]  = quick_period
-    st.session_state["analyser_trigger"] = True
-    st.session_state["pending_nav"]      = "🔍 Stock Analyser"
-    st.rerun()
-
-# ── Clear browser sidebar state + force sidebar open ─────────────────────────
-import streamlit.components.v1 as _stc
-_stc.html("""
-<script>
-(function(){
-    try {
-        // Clear every key that Streamlit uses to remember sidebar state
-        var p = window.parent;
-        Object.keys(p.localStorage).forEach(function(k){
-            if(k.indexOf('sidebar') !== -1 || k.indexOf('Sidebar') !== -1){
-                p.localStorage.removeItem(k);
-            }
-        });
-        Object.keys(p.sessionStorage).forEach(function(k){
-            if(k.indexOf('sidebar') !== -1 || k.indexOf('Sidebar') !== -1){
-                p.sessionStorage.removeItem(k);
-            }
-        });
-        // Then click the collapsed control if it still exists
-        setTimeout(function(){
-            var btn = p.document.querySelector('[data-testid="collapsedControl"]');
-            if(btn){ btn.click(); }
-        }, 500);
-    } catch(e){}
-})();
-</script>
-""", height=0)
-
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -1227,7 +1162,7 @@ _stc.html("""
 # ═══════════════════════════════════════════════════════════════════════════════
 if page == "📊 Market Overview":
     st.markdown(
-        f'<div style="margin-bottom:24px">'
+        f'<div style="margin-bottom:16px">'
         f'<h1 style="color:#f9fafb;font-size:32px;font-weight:800;margin:0;letter-spacing:-1px">'
         f'Market Overview</h1>'
         f'<p style="color:#374151;font-size:13px;margin:6px 0 0;font-weight:500">'
@@ -1235,6 +1170,24 @@ if page == "📊 Market Overview":
         f'</div>',
         unsafe_allow_html=True
     )
+
+    # ── Quick search hero (the dashboard home) ────────────────────────────────
+    _qs = st.columns([3, 1, 1])
+    _q_ticker = _qs[0].text_input(
+        "Search any PSX stock",
+        placeholder="Search any PSX stock — e.g. FFC, MEBL, PAKRI, AGHA, BOP...",
+        label_visibility="collapsed", key="home_search").upper().strip()
+    _q_period = _qs[1].selectbox(
+        "History", ["3mo", "6mo", "1y", "2y", "3y", "5y", "max"],
+        index=2, label_visibility="collapsed", key="home_period")
+    if _qs[2].button("🔍 Analyse", type="primary", use_container_width=True,
+                     key="home_go") and _q_ticker:
+        st.session_state["analyser_ticker"]  = _q_ticker
+        st.session_state["analyser_period"]  = _q_period
+        st.session_state["analyser_trigger"] = True
+        st.session_state["pending_nav"]      = "🔍 Stock Analyser"
+        st.rerun()
+    st.markdown("<div style='margin-bottom:14px'></div>", unsafe_allow_html=True)
 
     if df_all.empty:
         st.warning("No screener data. Run `python psx_screener_v2.py` first.")
